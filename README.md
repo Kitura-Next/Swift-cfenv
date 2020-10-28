@@ -1,4 +1,4 @@
-[![Build Status - Master](https://travis-ci.org/IBM-Swift/Swift-cfenv.svg?branch=master)](https://travis-ci.org/IBM-Swift/Swift-cfenv)
+[![Build Status - Master](https://travis-ci.org/Kitura-Next/Swift-cfenv.svg?branch=master)](https://travis-ci.org/Kitura-Next/Swift-cfenv)
 ![macOS](https://img.shields.io/badge/os-macOS-green.svg?style=flat)
 ![Linux](https://img.shields.io/badge/os-linux-green.svg?style=flat)
 
@@ -14,7 +14,7 @@ For the implementation of this Swift package, we used as inspiration a similar m
 The latest version of Swift-cfenv works with the `Swift 4.0` or newer. You can download this version of the Swift binaries by following this [link](https://swift.org/download/#snapshots).
 
 ## Configuration
-The latest version of Swift-cfenv relies on the [Configuration](https://github.com/IBM-Swift/Configuration) package to load and merge configuration data from multiple sources, such as environment variables or JSON files. In previous versions of Swift-cfenv, the library was responsible for accessing the environment variables directly. Moving forward, newer versions of Swift-cfenv will continue to depend on the configuration data loaded into a `ConfigurationManager` instance. For further details on the Configuration package, see its [README](https://github.com/IBM-Swift/Configuration) file.
+The latest version of Swift-cfenv relies on the [Configuration](https://github.com/Kitura-Next/Configuration) package to load and merge configuration data from multiple sources, such as environment variables or JSON files. In previous versions of Swift-cfenv, the library was responsible for accessing the environment variables directly. Moving forward, newer versions of Swift-cfenv will continue to depend on the configuration data loaded into a `ConfigurationManager` instance. For further details on the Configuration package, see its [README](https://github.com/Kitura-Next/Configuration) file.
 
 ## Usage
 To leverage the Swift-cfenv package in your Swift application, you should specify a dependency for it in your `Package.swift` file:
@@ -28,7 +28,7 @@ To leverage the Swift-cfenv package in your Swift application, you should specif
      ...
 
     dependencies: [
-        .package(url: "https://github.com/IBM-Swift/Swift-cfenv.git", .upToNextMajor(from: "5.0.0")),
+        .package(url: "https://github.com/Kitura-Next/Swift-cfenv.git", .upToNextMajor(from: "5.0.0")),
         
         ...
     ]
@@ -80,7 +80,7 @@ If the `VCAP_APPLICATION` isn't found when querying `ConfigurationManager`, it i
 
 ## API
 ### `ConfigurationManager`
-`ConfigurationManager` is a class provided by the [Configuration](https://github.com/IBM-Swift/Configuration) Swift package. Swift-cfenv simply adds extension points to this class, which gives you direct access to the Cloud Foundry configuration data. In your Swift application, you probably will first load configuration data from a local JSON file (this allows you to run locally) and then from environment variables.
+`ConfigurationManager` is a class provided by the [Configuration](https://github.com/Kitura-Next/Configuration) Swift package. Swift-cfenv simply adds extension points to this class, which gives you direct access to the Cloud Foundry configuration data. In your Swift application, you probably will first load configuration data from a local JSON file (this allows you to run locally) and then from environment variables.
 
 If you would like to create a JSON file that your application can leverage for local development, we recommend creating one that follows the following format:
 
