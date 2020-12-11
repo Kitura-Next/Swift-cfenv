@@ -1,0 +1,257 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 24,
+      "symbol": "App.Builder",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 105,
+      "symbol": "App.Limits",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 106,
+      "symbol": "App.Limits.memory",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 107,
+      "symbol": "App.Limits.disk",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 108,
+      "symbol": "App.Limits.fds",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 110,
+      "symbol": "App.Limits.init(memory:disk:fds:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 117,
+      "symbol": "App.id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 118,
+      "symbol": "App.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 119,
+      "symbol": "App.uris",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 120,
+      "symbol": "App.version",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 121,
+      "symbol": "App.instanceId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 122,
+      "symbol": "App.instanceIndex",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 123,
+      "symbol": "App.limits",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 124,
+      "symbol": "App.port",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 125,
+      "symbol": "App.spaceId",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 126,
+      "symbol": "App.startedAtTs",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/App.swift",
+      "line": 127,
+      "symbol": "App.startedAt",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/AppEnv.swift",
+      "line": 22,
+      "symbol": "ConfigurationManager.isLocal",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/AppEnv.swift",
+      "line": 27,
+      "symbol": "ConfigurationManager.app",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/AppEnv.swift",
+      "line": 32,
+      "symbol": "ConfigurationManager.port",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/AppEnv.swift",
+      "line": 41,
+      "symbol": "ConfigurationManager.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/AppEnv.swift",
+      "line": 49,
+      "symbol": "ConfigurationManager.bind",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/AppEnv.swift",
+      "line": 54,
+      "symbol": "ConfigurationManager.urls",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/AppEnv.swift",
+      "line": 72,
+      "symbol": "ConfigurationManager.url",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/AppEnv.swift",
+      "line": 77,
+      "symbol": "ConfigurationManager.services",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/DateUtils.swift",
+      "line": 19,
+      "symbol": "DateUtils",
+      "symbol_kind": "source.lang.swift.decl.struct",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/DateUtils.swift",
+      "line": 23,
+      "symbol": "DateUtils.init()",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/Service.swift",
+      "line": 20,
+      "symbol": "Service",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/Service.swift",
+      "line": 22,
+      "symbol": "Service.Builder",
+      "symbol_kind": "source.lang.swift.decl.class",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/Service.swift",
+      "line": 66,
+      "symbol": "Service.name",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/Service.swift",
+      "line": 67,
+      "symbol": "Service.label",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/Service.swift",
+      "line": 68,
+      "symbol": "Service.plan",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/Service.swift",
+      "line": 69,
+      "symbol": "Service.tags",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/Service.swift",
+      "line": 70,
+      "symbol": "Service.credentials",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/Service.swift",
+      "line": 72,
+      "symbol": "Service.init(name:label:plan:tags:credentials:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/runner/work/Swift-cfenv/Swift-cfenv/Sources/CloudFoundryEnv/Service.swift",
+      "line": 82,
+      "symbol": "Service.init(service:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/runner/work/Swift-cfenv/Swift-cfenv"
+}

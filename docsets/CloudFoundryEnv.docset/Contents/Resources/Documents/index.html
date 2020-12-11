@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CloudFoundryEnv  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="CloudFoundryEnv  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          CloudFoundryEnv Docs
+        </a>
+         (26% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">CloudFoundryEnv Reference</a>
+      <img class="carat" src="img/carat.png" />
+      CloudFoundryEnv  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Service.html">Service</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Service.html#/s:15CloudFoundryEnv7ServiceC7BuilderC">– Builder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/ConfigurationManager.html">ConfigurationManager</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/App.html">App</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/App.html#/s:15CloudFoundryEnv3AppV7BuilderC">– Builder</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/App/Limits.html">– Limits</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/DateUtils.html">DateUtils</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/JSONUtils.html">JSONUtils</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            
+            <p align="center">
+<a href="http://kituranext.org/">
+<img src="https://raw.githubusercontent.com/Kitura-Next/Kitura/master/Sources/Kitura/resources/kitura-bird.svg?sanitize=true" height="100" alt="Kitura">
+</a>
+</p>
+
+<p align="center">
+    <a href="https://www.kituranext.org/learn/">
+    <img src="https://img.shields.io/badge/docs-kitura-1FBCE4.svg" alt="APIDoc"></a>
+    <a href="https://github.com/Kitura-Next/Swift-cfenv/actions?query=workflow%3ASwift+MacOS">
+    <img src="https://github.com/Kitura-Next/Swift-cfenv/workflows/Swift%20MacOS/badge.svg"></a>
+    <a href="https://github.com/Kitura-Next/Swift-cfenv/actions?query=workflow%3ASwift+Ubuntu">
+    <img src="https://github.com/Kitura-Next/Swift-cfenv/workflows/Swift%20Ubuntu/badge.svg"></a>
+    <img src="https://img.shields.io/badge/license-Apache2-blue.svg?style=flat" alt="Apache 2">
+    <a href="http://swift-at-ibm-slack.mybluemix.net/">
+    <img src="http://swift-at-ibm-slack.mybluemix.net/badge.svg" alt="Slack Status"></a>
+</p>
+<h1 id='swift-cfenv' class='heading'>Swift-cfenv</h1>
+
+<p>The Swift-cfenv package provides structures and methods to parse Cloud Foundry-provided configuration variables, such as the port number, IP address, and URL of the application. It also provides default values when running the application locally.</p>
+
+<p>This library determines if you are running your application &ldquo;locally&rdquo; or on the cloud (i.e. as a Cloud Foundry application), based on whether the <code>VCAP_APPLICATION</code> configuration variable is set. If not set, it is assumed you are running in &ldquo;local&rdquo; mode instead of &ldquo;cloud mode&rdquo;.</p>
+
+<p>For the implementation of this Swift package, we used as inspiration a similar module that had been developed for Node.js applications, <a href="https://github.com/cloudfoundry-community/node-cfenv">node-cfenv</a>.</p>
+<h2 id='swift-version' class='heading'>Swift version</h2>
+
+<p>Requires <strong>Swift 5.1</strong> or newer. You can download the Swift binaries by following this <a href="https://swift.org/download/">link</a>.<br>
+Compatibility with other Swift versions is not guaranteed.</p>
+<h2 id='configuration' class='heading'>Configuration</h2>
+
+<p>The latest version of Swift-cfenv relies on the <a href="https://github.com/Kitura-Next/Configuration">Configuration</a> package to load and merge configuration data from multiple sources, such as environment variables or JSON files. In previous versions of Swift-cfenv, the library was responsible for accessing the environment variables directly. Moving forward, newer versions of Swift-cfenv will continue to depend on the configuration data loaded into a <code>ConfigurationManager</code> instance. For further details on the Configuration package, see its <a href="https://github.com/Kitura-Next/Configuration">README</a> file.</p>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>To leverage the Swift-cfenv package in your Swift application, you should specify a dependency for it in your <code>Package.swift</code> file:</p>
+<pre class="highlight swift"><code> <span class="kd">import</span> <span class="kt">PackageDescription</span>
+
+ <span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
+     <span class="nv">name</span><span class="p">:</span> <span class="s">"MyAwesomeSwiftProject"</span><span class="p">,</span>
+
+     <span class="o">...</span>
+
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Kitura-Next/Swift-cfenv.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">upToNextMajor</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"5.0.0"</span><span class="p">)),</span>
+
+        <span class="o">...</span>
+    <span class="p">]</span>
+
+    <span class="o">...</span>
+</code></pre>
+
+<p>Once the Package.swift file of your application has been updated accordingly, you can import the <code>CloudFoundryEnv</code> and <code>Configuration</code> modules in your code:</p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Configuration</span>
+<span class="kd">import</span> <span class="kt">CloudFoundryEnv</span>
+
+<span class="o">...</span>
+
+<span class="k">let</span> <span class="nv">configFileURL</span><span class="p">:</span> <span class="kt">URL</span> <span class="o">=</span> <span class="o">...</span>
+
+<span class="o">...</span>
+
+<span class="k">let</span> <span class="nv">configManager</span> <span class="o">=</span> <span class="kt">ConfigurationManager</span><span class="p">()</span>
+<span class="c1">// To load configuration data from a file or environment variables:</span>
+<span class="c1">//configManager.load(url: configFileURL)</span>
+<span class="c1">//             .load(.environmentVariables)</span>
+
+<span class="c1">// Use the given port and binding host values to create a socket for our server...</span>
+<span class="k">let</span> <span class="nv">ip</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="n">configManager</span><span class="o">.</span><span class="n">bind</span>
+<span class="k">let</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int</span> <span class="o">=</span> <span class="n">configManager</span><span class="o">.</span><span class="n">port</span>
+
+<span class="o">...</span>
+
+<span class="c1">// Once the server starts, print the url value</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"Server is starting on </span><span class="se">\(</span><span class="n">configManager</span><span class="o">.</span><span class="n">url</span><span class="se">)</span><span class="s">."</span><span class="p">)</span>
+</code></pre>
+
+<p>The code snippet above gets the binding host and port values through the <a href="#configurationmanager"><code>ConfigurationManager</code></a> object, which your Swift application creates and populates according to its needs (e.g. a JSON file, environment variables, etc.). Swift-cfenv queries the <code>ConfigurationManager</code> instance to obtain those configuration properties that pertain to Cloud Foundry. These values are then used for binding the server. Also, the URL value for the application (also obtained from configuration properties) can be used for logging purposes as shown above.</p>
+
+<p>The main purpose of this library is to simplify accessing the configuration values provided by Cloud Foundry.</p>
+<h2 id='running-your-application-in-cloud-foundry-vs-locally' class='heading'>Running your application in Cloud Foundry vs. locally</h2>
+
+<p>The following configuration properties are set when your application is running in Cloud Foundry as environment variables:</p>
+
+<ul>
+<li><code>VCAP_APPLICATION</code></li>
+<li><code>VCAP_SERVICES</code></li>
+<li><code>PORT</code></li>
+</ul>
+
+<p>When running in Cloud Foundry, Swift-cfenv expects these properties to be loaded in the <code>ConfigurationManager</code> instance your application instantiates.</p>
+
+<p>If the <code>VCAP_APPLICATION</code> isn&rsquo;t found when querying <code>ConfigurationManager</code>, it is then assumed that your application is running locally. For such cases, the <a href="#configurationmanager"><code>ConfigurationManager</code></a> instance returns values that are still useful for starting your application. Therefore, this Swift package can be used when running in Cloud Foundry and when running locally.</p>
+<h2 id='api' class='heading'>API</h2>
+<h3 id='code-configurationmanager-code' class='heading'><code>ConfigurationManager</code></h3>
+
+<p><code>ConfigurationManager</code> is a class provided by the <a href="https://github.com/Kitura-Next/Configuration">Configuration</a> Swift package. Swift-cfenv simply adds extension points to this class, which gives you direct access to the Cloud Foundry configuration data. In your Swift application, you probably will first load configuration data from a local JSON file (this allows you to run locally) and then from environment variables.</p>
+
+<p>If you would like to create a JSON file that your application can leverage for local development, we recommend creating one that follows the following format:</p>
+
+<ul>
+<li><code>name</code> - A string value for the name of the application. If this property is not specified in the JSON file, the <code>name</code> property of the <code>VCAP_APPLICATION</code> environment variable is used.</li>
+<li><code>protocol</code> - The protocol used in the generated URLs. It overrides the default protocol used when generating the URLs for the <code>ConfigurationManager</code> object.</li>
+<li><code>vcap</code> - JSON object that provides values when running locally for the <code>VCAP_APPLICATION</code> and <code>VCAP_SERVICES</code> environment variables. This JSON object can have an <code>application</code> field and/or a <code>services</code> field, whose values are the same as the values serialized in the <code>VCAP_APPLICATION</code> and <code>VCAP_SERVICES</code> variables. Please, note that, when running locally, the <code>url</code> and <code>urls</code> extended properties of the <code>ConfigurationManager</code> instance are not based on the <code>vcap</code> application object (it defaults to <code>localhost</code> in those cases). Also, note that the <code>vcap</code> property is ignored if not running locally.</li>
+</ul>
+<h3 id='extensions-for-code-configurationmanager-code' class='heading'>Extensions for <code>ConfigurationManager</code></h3>
+
+<p>An instance of the <code>ConfigurationManager</code> class has the following extended properties:</p>
+
+<ul>
+<li><code>isLocal</code>: Bool property is set to true if the VCAP_APPLICATION environment variable was set.</li>
+<li><code>app</code>: A JSON object version of the VCAP_APPLICATION environment variable.</li>
+<li><code>services</code>: A JSON object version of the VCAP_SERVICES environment variable.</li>
+<li><code>name</code>: A string that contains the name of the application.</li>
+<li><code>port</code>: An integer that contains the HTTP port number.</li>
+<li><code>bind</code>: A string with the ip address for binding the server.</li>
+<li><code>urls</code>: A string array that contains the URLs for accessing the servers.</li>
+<li><code>url</code>: The first string in the urls array.</li>
+</ul>
+
+<p>If no value can be determined for the <code>port</code> property, a default port of 8080 is assigned to it. Note that 8080 is the default port value used by applications running on <a href="https://docs.cloudfoundry.org/running/apps-enable-diego.html">Diego</a>.</p>
+
+<p>If running locally, the protocol used for the URLs will be <code>http</code>, otherwise it will be <code>https</code>. You can override this logic by specifying a particular protocol using the <code>protocol</code> property on the <code>options</code> parameter.</p>
+
+<p>If the actual hostnames cannot be determined when running on the cloud (i.e. in Cloud Foundry), the url and urls values will have <code>localhost</code> as their hostname value.</p>
+
+<p>The following are the instance method extensions for a <code>ConfigurationManager</code> object:</p>
+
+<ul>
+<li><p><code>getApp()</code>: Returns an <a href="#app">App</a> object that encapsulates the properties for the <a href="https://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-APPLICATION">VCAP_APPLICATION</a> environment variable.</p></li>
+<li><p><code>getServices()</code>: Returns all services bound to the application in a dictionary. The key in the dictionary is the name of the service, while the value is a Service object. Please note that this returned value is different than the <code>services</code> property returned from the <code>ConfigurationManager</code> instance.</p></li>
+<li><p><code>getServices(type: String)</code>: Returns an array of Service objects that match the value of the service <code>type</code> parameter. The <code>type</code> parameter should be the label of the service (or a regular expression to look up the service by its label).</p></li>
+<li><p><code>getService(spec: String)</code>: Returns a <a href="#service">Service</a> object for the specified Cloud Foundry service. The <code>spec</code> parameter should be the name of the service or a regular expression to look up the service. If there is no service that matches the <code>spec</code> parameter, this method returns nil.</p></li>
+<li><p><code>getServiceURL(spec: String, replacements: [String:Any]?)</code>: Returns a service URL generated from the <code>VCAP_SERVICES</code> environment variable for the specified service or nil if service cannot be found. The <code>spec</code> parameter should be the name of the service or a regular expression to look up the service. The <code>replacements</code> parameter is a dictionary with the properties (e.g. <code>user</code>, <code>password</code>, <code>port</code>, etc.) found in Foundation&rsquo;s <a href="https://developer.apple.com/reference/foundation/urlcomponents">URLComponents</a> class. To generate the service URL, the <code>url</code> property in the service credentials is first used to create an instance of the URLComponents object. The initial set of properties in the URLComponents instance can then be overridden by properties specified in the optional <code>replacements</code> dictionary parameter. If there is not a <code>url</code> property in the service credentials, this method returns nil. Having said this, note that you have the capability to override the <code>url</code> property in the service credentials, with a <code>replacements</code> property of <code>url</code> and a value that specifies the name of the property in the service credentials that contains the base URL. For instance, you may find this useful in the case there is no <code>url</code> property in the service credentials.</p></li>
+<li><p><code>getServiceCreds(spec: String)</code>: Returns a dictionary that contains the credentials for the specified service. The <code>spec</code> parameter should be the name of the service or a regular expression to look up the service. If there is no service that matches the <code>spec</code> parameter, this method returns nil. In the case there is no credentials property for the specified service, an empty dictionary is returned.</p></li>
+</ul>
+<h3 id='app' class='heading'>App</h3>
+
+<p>App is a structure that contains the following <a href="https://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-APPLICATION"><code>VCAP_APPLICATION</code></a> environment variable properties:</p>
+
+<ul>
+<li><code>id</code>: A GUID string identifying the application.</li>
+<li><code>name</code>: A string that contains the name assigned to the application.</li>
+<li><code>uris</code>: A string array that contains the URIs assigned to the application.</li>
+<li><code>version</code>: A GUID string identifying a version of the application.</li>
+<li><code>instanceId</code>: A GUID string that identifies the application instance.</li>
+<li><code>instanceIndex</code>: An integer that represents the index number of the instance.</li>
+<li><code>limits</code>: An <a href="#applimits">App.Limits</a> object that contains memory, disk, and number of files for the application instance (see below).</li>
+<li><code>port</code>: An integer that contains the port number of the application instance.</li>
+<li><code>spaceId</code>: A GUID string identifying the application’s space.</li>
+<li><code>startedAtTs</code>: An NSTimeInterval instance that contains the Unix epoch timestamp for the time the application instance was started.</li>
+<li><code>startedAt</code>: An NSDate object that contains the time when the application instance was started.</li>
+</ul>
+<h3 id='app-limits' class='heading'>App.Limits</h3>
+
+<p>The App.Limits structure contains the memory, disk, and number of files for an application instance:</p>
+
+<ul>
+<li><code>memory</code>: An integer that represents memory for the application (this value is commonly specified in the manifest file).</li>
+<li><code>disk</code>: An integer that represents the disk space for the application (this value is commonly specified in the manifest file).</li>
+<li><code>fds</code>: An integer that represents the number of files.</li>
+</ul>
+<h3 id='service' class='heading'>Service</h3>
+
+<p>Service is a class that contains the following properties for a Cloud Foundry <a href="https://docs.run.pivotal.io/devguide/deploy-apps/environment-variable.html#VCAP-SERVICES">service</a>:</p>
+
+<ul>
+<li><code>name</code>: A string that contains the name assigned to the service instance.</li>
+<li><code>label</code>: A string that contains the name of the service offering.</li>
+<li><code>plan</code> : A string that states the service plan selected when the service instance was created. If the service has no plan, the string &lsquo;N/A&rsquo; is assigned to this field.</li>
+<li><code>tags</code>: An array of strings that contains values to identify a service instance.</li>
+<li><code>credentials</code>: An optional dictionary that contains the service credentials required to access the service instance. Note that the credential properties for accessing a service could be completely different from one to another. For instance, the credentials dictionary for a service may simply contain a <code>uri</code> property while the credentials dictionary for another service may contain a <code>hostname</code>, <code>username</code>, and <code>password</code> properties.</li>
+</ul>
+<h2 id='testing-on-the-ibm-cloud' class='heading'>Testing on the IBM Cloud</h2>
+
+<p>To test this Swift library on the IBM Cloud, you can follow the steps described in this section which use the IBM Cloud <a href="https://console.ng.bluemix.net/docs/cli/reference/bluemix_cli/index.html#getting-started">command line</a>.</p>
+
+<p>Create a dummy service named <code>cf-dummy-service</code>:</p>
+
+<p><code>bx service user-provided-create cf-dummy-service -p &quot;url, username, password, database&quot;</code></p>
+
+<p>The IBM Cloud command line will then prompt you for the following (please enter some reasonable values):</p>
+<pre class="highlight plaintext"><code>url&gt; http://swift-cfenv-service.test.com
+username&gt; username00
+password&gt; password00
+database&gt; CloudantDB
+</code></pre>
+
+<p>Once the dummy service is created, you can clone IBM Cloud&rsquo;s <a href="https://github.com/IBM-Bluemix/swift-helloworld">swift-helloworld</a> application using the following command:</p>
+
+<p><code>git clone https://github.com/IBM-Bluemix/swift-helloworld.git</code></p>
+
+<p>Then push the swift-helloworld application using the following command:</p>
+
+<p><code>bx app push</code></p>
+
+<p>Once the application is successfully pushed, you need to bind the service you created previously to the new application and then restage the application:</p>
+
+<p><code>bx service bind swift-helloworld cf-dummy-service</code></p>
+
+<p><code>bx app restage swift-helloworld</code></p>
+
+<p>After the application is restaged, you can visit the route (i.e. URL) assigned to the app and you should see the output of various Swift-cfenv invocations.</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p>This Swift package is licensed under Apache 2.0. Full license text is available in <a href="LICENSE">LICENSE</a>.</p>
+
+          </div>
+        </section>
+
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2020 <a class="link" href="" target="_blank" rel="external"></a>. All rights reserved. (Last updated: 2020-12-11)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.6</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>
