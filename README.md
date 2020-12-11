@@ -1,6 +1,20 @@
-[![Build Status - Master](https://travis-ci.org/Kitura-Next/Swift-cfenv.svg?branch=master)](https://travis-ci.org/Kitura-Next/Swift-cfenv)
-![macOS](https://img.shields.io/badge/os-macOS-green.svg?style=flat)
-![Linux](https://img.shields.io/badge/os-linux-green.svg?style=flat)
+<p align="center">
+<a href="http://kituranext.org/">
+<img src="https://raw.githubusercontent.com/Kitura-Next/Kitura/master/Sources/Kitura/resources/kitura-bird.svg?sanitize=true" height="100" alt="Kitura">
+</a>
+</p>
+
+<p align="center">
+    <a href="https://www.kituranext.org/learn/">
+    <img src="https://img.shields.io/badge/docs-kitura-1FBCE4.svg" alt="APIDoc"></a>
+    <a href="https://github.com/Kitura-Next/Swift-cfenv/actions?query=workflow%3ASwift+MacOS">
+    <img src="https://github.com/Kitura-Next/Swift-cfenv/workflows/Swift%20MacOS/badge.svg"></a>
+    <a href="https://github.com/Kitura-Next/Swift-cfenv/actions?query=workflow%3ASwift+Ubuntu">
+    <img src="https://github.com/Kitura-Next/Swift-cfenv/workflows/Swift%20Ubuntu/badge.svg"></a>
+    <img src="https://img.shields.io/badge/license-Apache2-blue.svg?style=flat" alt="Apache 2">
+    <a href="http://swift-at-ibm-slack.mybluemix.net/">
+    <img src="http://swift-at-ibm-slack.mybluemix.net/badge.svg" alt="Slack Status"></a>
+</p>
 
 # Swift-cfenv
 
@@ -11,7 +25,9 @@ This library determines if you are running your application "locally" or on the 
 For the implementation of this Swift package, we used as inspiration a similar module that had been developed for Node.js applications, [node-cfenv](https://github.com/cloudfoundry-community/node-cfenv).
 
 ## Swift version
-The latest version of Swift-cfenv works with the `Swift 4.0` or newer. You can download this version of the Swift binaries by following this [link](https://swift.org/download/#snapshots).
+Requires **Swift 5.1** or newer. You can download the Swift binaries by following this [link](https://swift.org/download/).  
+Compatibility with other Swift versions is not guaranteed.
+
 
 ## Configuration
 The latest version of Swift-cfenv relies on the [Configuration](https://github.com/Kitura-Next/Configuration) package to load and merge configuration data from multiple sources, such as environment variables or JSON files. In previous versions of Swift-cfenv, the library was responsible for accessing the environment variables directly. Moving forward, newer versions of Swift-cfenv will continue to depend on the configuration data loaded into a `ConfigurationManager` instance. For further details on the Configuration package, see its [README](https://github.com/Kitura-Next/Configuration) file.
